@@ -1,6 +1,6 @@
-# HDFS MCP Controller
+# HDFS MCP Server
 
-A HDFS controller based on MCP (Model Context Protocol) that provides access to HDFS clusters through the MCP protocol.
+HDFS MCP Server is a controller based on MCP (Model Context Protocol) that provides access to HDFS clusters through the MCP protocol. The server supports basic HDFS operations such as file upload, download, move, copy, and provides friendly error handling and connection testing capabilities.
 
 ## Requirements
 
@@ -69,7 +69,7 @@ Replace the following with your actual configuration:
 
 ## Features
 
-The controller provides the following HDFS operations:
+The HDFS MCP provides the following HDFS operations:
 
 - List directory contents
 - Read file contents
