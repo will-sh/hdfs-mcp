@@ -12,8 +12,8 @@ HDFS MCP Server is a controller based on MCP (Model Context Protocol) that provi
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/will-sh/hdfsmcp.git
-    cd hdfsmcp
+    git clone https://github.com/will-sh/hdfs-mcp.git
+    cd hdfs-mcp
     ```
 
 2. **Ensure Python 3.11 is active:**
@@ -36,11 +36,7 @@ HDFS MCP Server is a controller based on MCP (Model Context Protocol) that provi
     uv pip sync
     ```
 
-## Configuration
-
 ### MCP Configuration
-
-Add the following configuration to your Cursor MCP configuration file (`~/.cursor/mcp.json`):
 
 ```json
 {
@@ -63,7 +59,7 @@ Add the following configuration to your Cursor MCP configuration file (`~/.curso
 ```
 
 Replace the following with your actual configuration:
-- `/path/to/your/hdfsmcp`: Replace with your project's actual path
+- `/path/to/your/hdfs-mcp`: Replace with your project's actual path
 - `your_namenode_hostname`: Replace with your HDFS NameNode hostname
 - `your_namenode_port`: Replace with your HDFS NameNode port (if not specify the default port is 8020)
 
