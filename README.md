@@ -6,7 +6,7 @@ A HDFS controller based on MCP (Model Context Protocol) that provides access to 
 
 - Python 3.11 or higher
 - Hadoop client installed and configured
-- `uv` package manager
+- [`uv`](https://docs.astral.sh/uv/) package manager
 
 ## Installation
 
@@ -38,15 +38,7 @@ A HDFS controller based on MCP (Model Context Protocol) that provides access to 
 
 ## Configuration
 
-### 1. Environment Variables
-
-Create a `.env` file in the project root directory with the following variables:
-```bash
-HDFS_NAMENODE=your_namenode_hostname
-NAMENODE_PORT=8020
-```
-
-### 2. MCP Configuration
+### MCP Configuration
 
 Add the following configuration to your Cursor MCP configuration file (`~/.cursor/mcp.json`):
 
@@ -71,7 +63,7 @@ Add the following configuration to your Cursor MCP configuration file (`~/.curso
 ```
 
 Replace the following with your actual configuration:
-- `/path/to/your/hdfs`: Replace with your project's actual path
+- `/path/to/your/hdfsmcp`: Replace with your project's actual path
 - `your_namenode_hostname`: Replace with your HDFS NameNode hostname
 - `your_namenode_port`: Replace with your HDFS NameNode port (if not specify the default port is 8020)
 
