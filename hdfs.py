@@ -2,11 +2,11 @@
 from mcp.server.fastmcp import FastMCP
 import subprocess
 import os
-from typing import Optional, List
-from dotenv import load_dotenv
+from typing import List
 
-
-load_dotenv()
+# Load env from mcp json
+HDFS_NAMENODE=os.environ.get("HDFS_NAMENODE")
+HDFS_PORT=os.environ.get("HDFS_PORT")
 
 # Create a more robust HDFS URI for consistency
 HDFS_URI = f"hdfs://{HDFS_NAMENODE}:{HDFS_PORT}"
