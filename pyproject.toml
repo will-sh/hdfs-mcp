@@ -1,12 +1,60 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
-name = "hdfs"
+name = "hdfs-mcp"
 version = "0.1.0"
-description = "Add your description here"
+description = "HDFS MCP Server - Model Context Protocol server for HDFS operations"
 readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Will Xiao", email = "wxiao@cloudera.com"}
+]
+maintainers = [
+    {name = "Will Xiao", email = "wxiao@cloudera.com"}
+]
+keywords = ["hdfs", "mcp", "model-context-protocol", "hadoop", "big-data"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Distributed Computing",
+]
 requires-python = ">=3.11"
 dependencies = [
     "fastapi>=0.115.12",
     "mcp[cli]>=1.9.1",
     "pydantic>=2.11.5",
     "uvicorn>=0.34.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/will-sh/hdfs-mcp"
+Repository = "https://github.com/will-sh/hdfs-mcp"
+Issues = "https://github.com/will-sh/hdfs-mcp/issues"
+Documentation = "https://github.com/will-sh/hdfs-mcp#readme"
+
+[project.scripts]
+hdfs-mcp = "hdfs:main"
+
+[tool.hatch.build.targets.wheel]
+include = ["hdfs.py"]
+
+[dependency-groups]
+dev = [
+    "build>=1.2.2.post1",
+    "twine>=6.1.0",
 ]

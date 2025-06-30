@@ -260,11 +260,15 @@ def test_hdfs_connection() -> str:
     else:
         return f"HDFS 连接测试失败: {result['error']}"
 
-# 运行服务器
-if __name__ == "__main__":
+def main():
+    """Main entry point for the HDFS MCP server"""
     if not os.getenv('HADOOP_HOME') or not os.getenv('PATH') or "hdfs" not in os.getenv('PATH'):
         print("WARNING: HADOOP_HOME or HDFS command may not be correctly configured in environment variables.")
         print("Please ensure Hadoop client is installed and its 'bin' directory is in your PATH.")
         print("Refer to Hadoop documentation for proper client setup.")
 
     mcp.run()
+
+# 运行服务器
+if __name__ == "__main__":
+    main()
